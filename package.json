@@ -1,0 +1,36 @@
+{
+    "name": "floo-network-web",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "engines": {
+        "node": "20.17.0"
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "vue-tsc -b && vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "uuid": "^10.0.0",
+        "vue": "^3.4.37",
+        "vuetify": "^3.7.1"
+    },
+    "devDependencies": {
+        "@mdi/font": "^7.4.47",
+        "@types/node": "^22.5.1",
+        "@types/uuid": "^10.0.0",
+        "@typescript-eslint/eslint-plugin": "^8.3.0",
+        "@typescript-eslint/parser": "^8.3.0",
+        "@vitejs/plugin-vue": "^5.1.2",
+        "eslint": "8",
+        "eslint-plugin-vue": "^9.27.0",
+        "sass": "^1.77.8",
+        "typescript": "^5.5.3",
+        "unplugin-auto-import": "^0.18.2",
+        "unplugin-vue-components": "^0.27.4",
+        "vite": "^5.4.1",
+        "vite-plugin-vuetify": "^2.0.4",
+        "vue-tsc": "^2.0.29"
+    }
+}
