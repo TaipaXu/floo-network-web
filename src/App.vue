@@ -170,22 +170,25 @@ const api: MApi = new MApi({
             if (serverIp === 'server') {
                 serverIp = ip;
             }
+            const downloadId: string = data.downloadId;
             const port: number = data.port;
-            globalThis.open(`http://${serverIp}:${port}`);
+            globalThis.open(`http://${serverIp}:${port}/${downloadId}`);
         } else if (type === 'prepareUpload') {
             let ServerIp: string = data.ip;
             if (ServerIp === 'server') {
                 ServerIp = ip;
             }
+            const downloadId: string = data.downloadId;
             const port: number = data.port;
             const myFile = myFiles.value.find((item) => item.id === data.fileId);
 
             if (myFile !== undefined) {
-                api.uploadFile(`http://${ServerIp}:${port}`, myFile);
+                api.uploadFile(`http://${ServerIp}:${port}/${downloadId}`, myFile);
             }
         }
     }
 });
+
 api.start();
 </script>
 
